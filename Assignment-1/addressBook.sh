@@ -56,6 +56,35 @@ do
 			echo -e "$Roll\t$Name\t$Address\t$Phone\n" | cat >> $fileName
 			;;
 
+		4 )
+			echo "Enter name of record you want to modify: "
+			read mname
+			temp="temp"
+			grep -v $mname $fileName | cat >> $temp
+			rm $fileName
+			cat $temp | cat >> $fileName
+			rm $temp
+			echo "Insert Roll: "
+			read Roll
+			echo "Insert Name: "
+			read Name
+			echo "Insert Address: "
+			read Address
+			echo "Insert Phone no: "
+			read Phone
+			echo -e "$Roll\t$Name\t$Address\t$Phone\n" | cat >> $fileName
+			;; 
+
+		5 )
+			echo "Enter name of record you want to delete:: "
+			read mname
+			temp="temp"
+			grep -v $mname $fileName | cat >> $temp
+			rm $fileName
+			cat $temp | cat >> $fileName
+			rm $temp
+			;; 
+
 		*)
             echo "Invalid option. Choose again!"
             ;;
