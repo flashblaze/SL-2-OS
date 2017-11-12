@@ -1,0 +1,9 @@
+4 = producer consumer. 
+	sem_t full_sem, empty_sem;
+	pthread_mutex_t buffer_mutex;
+	int buffer[10], buffer_index=0;
+6 = philosopher. sem_t mutex, S[N]
+	int state[N], phil_num[N] = {1, 2, 3, 4, 5}
+7a = fork and pipe . thus pipe func, and 2 fd arrays of size 2
+7b = named pipe. thus mkfifo func twice
+8 = system v so ipc so ipc create 066. so key, size, shmid, etc
